@@ -54,6 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
 
   List<Transaction> get _recentTransactions {
+
     return _userTransactions;
   }
 
@@ -98,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Chart(),
+        child: Chart(_recentTransactions),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
