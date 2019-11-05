@@ -99,7 +99,15 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: SingleChildScrollView(
-        child: Chart(_recentTransactions),
+        
+        child: Column(
+          children: <Widget>[
+            Chart(_recentTransactions),
+            TransactionList(
+              transactions: _userTransactions,
+            )
+          ],
+        ),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
