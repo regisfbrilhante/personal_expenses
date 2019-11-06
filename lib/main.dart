@@ -16,10 +16,13 @@ class MyApp extends StatelessWidget {
         accentColor: Colors.amber,
         fontFamily: 'Quicksand',
         textTheme: ThemeData.light().textTheme.copyWith(
-            title: TextStyle(
-                fontFamily: 'OpenSans',
-                fontWeight: FontWeight.bold,
-                fontSize: 18)),
+              title: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18),
+                  button: TextStyle(color: Colors.white)
+            ),
+            
         appBarTheme: AppBarTheme(
             textTheme: ThemeData.light().textTheme.copyWith(
                     title: TextStyle(
@@ -54,7 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
   ];
 
   List<Transaction> get _recentTransactions {
-
     return _userTransactions;
   }
 
@@ -99,7 +101,6 @@ class _MyHomePageState extends State<MyHomePage> {
         ],
       ),
       body: SingleChildScrollView(
-        
         child: Column(
           children: <Widget>[
             Chart(_recentTransactions),
